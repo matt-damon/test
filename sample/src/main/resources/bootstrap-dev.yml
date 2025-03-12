@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.247.166.247:32016/bmp_order_service?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false&rewriteBatchedStatements=true
+    username: order_dev
+    password: cHa@8h76b5L

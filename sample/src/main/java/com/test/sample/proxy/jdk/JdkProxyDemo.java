@@ -1,6 +1,16 @@
-package com.test.sample.proxy;
+package com.test.sample.proxy.jdk;
 
 import java.lang.reflect.Proxy;
+
+/**
+ * JDK动态代理：适用于接口驱动的编程模式，创建代理对象时开销较小，但方法调用时性能略慢。
+ *
+ * JDK动态代理的底层逻辑主要依赖于反射机制和InvocationHandler接口。当调用代理对象的方法时，代理类会拦截该方法调用，并通过InvocationHandler.invoke()方法执行额外的逻辑。具体步骤如下：
+ * 1. 创建代理对象：使用Proxy.newProxyInstance()方法创建代理对象。该方法需要三个参数：类加载器、目标类实现的接口列表和一个实现了InvocationHandler接口的处理器对象。
+ * 2. 拦截方法调用：当调用代理对象的方法时，代理类会拦截该方法调用，并将调用转发给InvocationHandler的invoke()方法。
+ * 3. 执行额外逻辑：在invoke()方法中，可以执行额外的逻辑（如日志记录、权限检查等），然后通过反射调用目标对象的方法来完成实际的业务逻辑。
+ */
+
 
 public class JdkProxyDemo {
     public static void main(String[] args) {
